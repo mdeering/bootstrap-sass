@@ -13,7 +13,7 @@ end
 require 'slim-rails'
 require 'jquery-rails'
 require 'compass'
-require 'bootstrap-sass'
+require 'bootstrap-sass-backport'
 require 'uglifier'
 
 module Dummy

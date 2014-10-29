@@ -1,5 +1,5 @@
 require 'sass'
-require 'bootstrap-sass'
+require 'bootstrap-sass-backport'
 require 'fileutils'
 
 scss_path = File.expand_path('./import_all.sass', File.dirname(__FILE__))
