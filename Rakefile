@@ -5,10 +5,9 @@ require 'bundler/gem_tasks'
 load './tasks/bower.rake'
 
 require 'rake/testtask'
-Rake::TestTask.new do |t|
-  t.libs << "test"
-  t.test_files = FileList['test/*_test.rb']
-  t.verbose    = true
+task :test do |t|
+  $: << File.expand_path('test/')
+  Dir.glob('./test/**/*_test.rb').each { |file| require file }
 end
 
 desc 'Dumps output to a CSS file for testing'
